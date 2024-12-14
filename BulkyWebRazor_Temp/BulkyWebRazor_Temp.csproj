@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css" />
-    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">

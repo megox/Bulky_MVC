@@ -39,7 +39,6 @@ namespace BulkyWeb.Controllers
             else {
                 return View();
             }
-
         }
 
 
@@ -65,6 +64,7 @@ namespace BulkyWeb.Controllers
         }
 
 
+
         [HttpGet]
         public IActionResult Delete(int? id)
         {
@@ -73,6 +73,8 @@ namespace BulkyWeb.Controllers
             if (categoryFromDb == null) return NotFound();
             return View(categoryFromDb);
         }
+
+
 
 
         [HttpPost , ActionName("Delete")]

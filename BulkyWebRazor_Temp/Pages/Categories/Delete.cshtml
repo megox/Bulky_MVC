@@ -1,4 +1,6 @@
-﻿@model Category
+﻿@page
+@model BulkyWebRazor_Temp.Pages.Categories.DeleteModel
+
 
 <form method="post">
 
@@ -12,13 +14,13 @@
 
         <div class="mb-3">
 
-            <label asp-for="Name" class="h5"></label>
-            <input asp-for="Name" disabled class="border form-control" />
+            <label asp-for="category.Name" class="h5"></label>
+            <input asp-for="category.Name" disabled class="border form-control" />
         </div>
 
         <div class=" mb-2">
-            <label asp-for="DisplayOrder" class="h5"></label>
-            <input asp-for="DisplayOrder"  disabled class=" border form-control" />
+            <label asp-for="category.DisplayOrder" class="h5"></label>
+            <input asp-for="category.DisplayOrder" disabled class=" border form-control" />
 
         </div>
 
@@ -27,7 +29,7 @@
                 <button type="submit" class="btn btn-danger form-control">Delete</button>
             </div>
             <div class="col-6 col-md-3">
-                <a asp-controller="Category" asp-action="Index" class="btn btn-secondery form-control border">Back To List</a>
+                <a asp-page="/Categories/Index" class="btn btn-secondery form-control border">Back To List</a>
             </div>
         </div>
 
