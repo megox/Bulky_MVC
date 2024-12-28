@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Product>
+
+
+<style>
+    .card {
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .card:hover {
+        transform: scale(1.1); /* Makes the card bigger */
+    }
+</style>
+
+<div class="container">
+    <div class="row pb-5">
+
+        @foreach(var card in Model){
+            <div class="col-6 col-md-3 mb-3 mt-3">
+               
+                        <div class="card shadow rounded-2 border-0">
+                            <img src="@card.ImageUrl" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h5 class="card-title">@card.Title</h5>
+                                    <p class="card-text text-decoration-line-through mb-0 text-danger">@card.Price $</p>
+                                    <p class="card-text">@card.Price100$</p>
+                                    <p class="card-text">by <span style="color:burlywood">@card.Author</span></p>
+                                    <a asp-action="Details" asp-route-id="@card.Id" class="btn btn-primary">Details</a>
+
+                                </div>
+                                
+                            </div>
+                        </div> 
+            </div>
+        }
+       
+
+
+
+    </div>
+    
+
+
+</div>
+
+
