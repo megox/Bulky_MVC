@@ -1,0 +1,43 @@
+﻿@model List<Company>
+
+
+<br />
+<div class="continer mt-5">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary fw-bold">Company List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Company" asp-action="UpSert" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i>  Create New Company
+            </a>
+        </div>
+    </div>
+
+
+    <table id="tblData" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Street Address</th>
+                <th>City</th>
+                <th>Postal Code</th>
+                <th>Phone Number</th>
+                <th></th>
+            </tr>
+           
+        </thead>
+     
+
+    </table>
+
+    <br />
+    <br />
+</div>
+
+
+
+
+@section Scripts {
+    <script src="~/js/company.js"></script>
+}

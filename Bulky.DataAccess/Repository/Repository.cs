@@ -16,7 +16,7 @@ namespace Bulky.DataAccess.Repository
         internal DbSet<T> dbSet;
 
         
-
+          
         public Repository(ApplicationDbContext db)
         {
             _db = db;
@@ -41,9 +41,6 @@ namespace Bulky.DataAccess.Repository
                     query = query.Include(prop);
                 }
             }
-
-
-
             query = query.Where(filter);
 
             return query.FirstOrDefault(filter);

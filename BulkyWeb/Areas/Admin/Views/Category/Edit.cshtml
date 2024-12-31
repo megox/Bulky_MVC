@@ -1,11 +1,13 @@
 ﻿@model Category
 
-<div class="card shadow border-0 mt-4">
+
+<br />
+<div class="card shadow border-0 mt-5">
 
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">Edit Category</h2>
+                <h2 class="text-white py-2 fw-bold">Edit Category</h2>
             </div>
         </div>
     </div>
@@ -19,13 +21,13 @@
 
                 <div class="mb-3">
 
-                    <label asp-for="Name" class="h5"></label>
+                    <label asp-for="Name" class="h5 fw-bold"></label>
                     <input asp-for="Name" class="border form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
 
                 <div class=" mb-2">
-                    <label asp-for="DisplayOrder" class="h5"></label>
+                    <label asp-for="DisplayOrder" class="h5 fw-bold"></label>
                     <input asp-for="DisplayOrder" class=" border form-control" />
                     <span asp-validation-for="DisplayOrder" class="text-danger"></span>
 

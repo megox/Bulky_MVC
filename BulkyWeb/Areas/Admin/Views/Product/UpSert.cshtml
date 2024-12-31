@@ -1,16 +1,17 @@
 ﻿@model ProductVM
 
-<div class="card shadow border-0 mt-2 mb-2">
+<br />
+<div class="card shadow border-0 mt-5 mb-2">
 
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-0"> @(Model.Product.Id == 0 ? "Create" :"Update") Product</h2>
+                <h2 class="text-white py-0 fw-bold"> @(Model.Product.Id == 0 ? "Create" :"Update") Product</h2>
             </div>
         </div>
     </div>
    
-    <div class="card-body p-4">
+    <div class="card-body p-4 fw-bold">
         <form method="post"  class="row" enctype="multipart/form-data">
 
 
@@ -25,53 +26,53 @@
                         <!-- <div asp-validation-summary="All"></div> -->
 
                         <div class="mb-3">
-                            <label asp-for="Product.Title" class="h5"></label>
+                            <label asp-for="Product.Title" class="h5 fw-bold"></label>
                             <input asp-for="Product.Title" class="border form-control" />
                             <span asp-validation-for="Product.Title" class="text-danger"></span>
                         </div>
 
                         <div class=" mb-2">
-                            <label asp-for="Product.ISBN" class="h5"></label>
+                            <label asp-for="Product.ISBN" class="h5 fw-bold "></label>
                             <input asp-for="Product.ISBN" class=" border form-control" />
                             <span asp-validation-for="Product.ISBN" class="text-danger"></span>
                         </div>
 
 
                         <div class=" mb-2">
-                            <label asp-for="Product.Author" class="h5"></label>
+                            <label asp-for="Product.Author" class="h5 fw-bold"></label>
                             <input asp-for="Product.Author" class=" border form-control" />
                             <span asp-validation-for="Product.Author" class="text-danger"></span>
                         </div>
 
 
                         <div class=" mb-2">
-                            <label asp-for="Product.Description" class="h5"></label>
+                            <label asp-for="Product.Description" class="h5 fw-bold"></label>
                             <textarea asp-for="Product.Description" class=" border form-control"> </textarea>
                         </div>
 
 
                         <div class=" mb-2">
-                            <label asp-for="Product.Price" class="h5"></label>
+                            <label asp-for="Product.Price" class="h5 fw-bold"></label>
                             <input asp-for="Product.Price" class=" border form-control" />
                             <span asp-validation-for="Product.Price" class="text-danger"></span>
                         </div>
 
                         <div class=" mb-2">
-                            <label asp-for="Product.Price50" class="h5"></label>
+                            <label asp-for="Product.Price50" class="h5 fw-bold"></label>
                             <input asp-for="Product.Price50" class=" border form-control" />
                             <span asp-validation-for="Product.Price50" class="text-danger"></span>
                         </div>
 
 
                         <div class=" mb-2">
-                            <label asp-for="Product.Price100" class="h5"></label>
+                            <label asp-for="Product.Price100" class="h5 fw-bold"></label>
                             <input asp-for="Product.Price100" class=" border form-control" />
                             <span asp-validation-for="Product.Price100" class="text-danger"></span>
                         </div>
 
 
                         <div class="mb-4">
-                            <label asp-for="Product.CategoryId" class="h5"></label>
+                            <label asp-for="Product.CategoryId" class="h5 fw-bold"></label>
                             <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class=" border form-control">
                                 <option disabled selected>-Select-</option>
                             </select>
@@ -81,7 +82,7 @@
 
 
                         <div class=" mb-2">
-                            <label class="h5">Choose Image</label>
+                            <label class="h5 fw-bold">Choose Image</label>
                             <input type="file" name="file" class=" border form-control" />
                             <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
                         </div>

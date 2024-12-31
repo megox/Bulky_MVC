@@ -1,6 +1,8 @@
 ﻿using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
 using Bulky.Models.ViewModels;
+using Bulky.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
@@ -10,6 +12,8 @@ using System.Collections.Generic;
 namespace BulkyWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
+
     public class ProductController : Controller
     {
 
@@ -40,32 +44,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
 
 
-       
-
-        //[HttpGet]
-        //public IActionResult Delete(int? id) {
-        //    if (id == null) return NotFound();
-        //    Product? productFromDb = _UnitOfWork.Product.Get(u => u.Id == id);
-        //    if (productFromDb == null) return NotFound();
-        //    return View(productFromDb);
-        //}
-
-
-
-
-        //[HttpPost, ActionName("Delete")]
-        //public IActionResult DeletePOST(int? id)
-        //{
-        //    Product? obj = _UnitOfWork.Product.Get(u => u.Id == id);
-        //    if (obj == null) return NotFound();
-        //    _UnitOfWork.Product.Remove(obj);
-        //    _UnitOfWork.Save();
-        //    TempData["success"] = "Product Deleted Successfully!";
-        //    return RedirectToAction("Index");
-        //}
-
-
-
         [HttpGet]
         public IActionResult UpSert(int? id) {
             ProductVM obj = new()
@@ -89,9 +67,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 obj.Product = _UnitOfWork.Product.Get(u => u.Id == id);
                 return View(obj);
             }
-
-
-
         }
 
 
@@ -189,6 +164,10 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
             return Json(new { success = true, message = "Delete Successful" });
         }
+
+
+
+        
 
         #endregion
 
