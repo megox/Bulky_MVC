@@ -75,7 +75,7 @@ html {
 }
 
 .bg-secondary {
-    background-color: #7B8A8B !important;
+    background-color: #31373D !important;
 }
 
 bg-success {
@@ -144,7 +144,7 @@ bg-success {
 
 
 
-    .btn-outline-warning:hover {
+    .btn-outline-warning {
         color: #fff;
         background-color: #C07b24;
         border-color: #C07b24;
@@ -240,16 +240,16 @@ bg-success {
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #445f5e;
-        border-color: #445f5e;
+        background-color: #31373D;
+        border-color: #31373D;
     }
 
 
 
     .btn-check:focus + .btn-primary, .btn-primary:focus {
         color: #fff;
-        background-color: #445f5e;
-        border-color: #445f5e;
+        background-color: #31373D;
+        border-color: #31373D;
         box-shadow: 0 0 0 0.25rem rgba(60, 60, 60, 0.5);
     }
 
@@ -259,8 +259,8 @@ bg-success {
     .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
     .show > .btn-primary.dropdown-toggle {
         color: #fff;
-        background-color: #445f5e;
-        border-color: #445f5e;
+        background-color: #31373D;
+        border-color: #31373D;
     }
 
 
@@ -275,8 +275,8 @@ bg-success {
 
     .btn-primary:disabled, .btn-primary.disabled {
         color: #fff;
-        background-color: #445f5e;
-        border-color: #445f5e;
+        background-color: #31373D;
+        border-color: #31373D;
     }
 
 

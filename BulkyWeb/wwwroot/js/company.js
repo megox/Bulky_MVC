@@ -19,7 +19,7 @@ function loadDataTable() {
                 "render": function (data) {
                     return `<div class="btn-group w-100 text-center" role="group">
 
-                        <a href="/admin/company/upsert?id=${data}" class="btn btn-primary m-1 w-auto"> <i class="bi bi-pencil-square"></i> it</a>
+                        <a href="/admin/company/upsert?id=${data}" class="btn btn-primary m-1 w-auto"> <i class="bi bi-pencil-square"></i> Edit</a>
                         <a onClick=Delete('/admin/company/delete/${data}') class="btn btn btn-danger m-1 w-auto"> <i class="bi bi-trash"></i> Delete</a>
 
                     </div>`
@@ -51,7 +51,6 @@ function Delete(url) {
             })
         }
     });
-
 
 }
 

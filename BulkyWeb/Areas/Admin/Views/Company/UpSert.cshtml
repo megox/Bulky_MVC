@@ -14,7 +14,7 @@
     
 
     <div class="card-body p-4 fw-bold">
-        <form method="post" class="row" enctype="multipart/form-data">
+        <form method="post" class="row">
 
 
             <div class="row">
@@ -76,7 +76,7 @@
                                 <button type="submit" class="btn btn-primary form-control">@(Model.id == 0 ? "Create" : "Update")</button>
                             </div>
                             <div class="col-6 col-md-3">
-                                <a asp-controller="Product" asp-action="Index" class="btn btn-secondery form-control border ">Back To List</a>
+                                <a asp-controller="Company" asp-action="Index" class="btn btn-secondery form-control border ">Back To List</a>
                             </div>
                         </div>
 

@@ -51,30 +51,32 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
 
 
-        //[HttpPost]
-        //public IActionResult UpSert(Company obj)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (obj.id == 0 || obj.id == null) {
-        //            _unitOfWork.Company.Add(obj);
-                  
-        //            TempData["success"] = "Comapny Created Successfully!";
-        //        }
-        //        else{
-        //            _unitOfWork.Company.Update(obj);
-        //            TempData["success"] = "Comapny Updated Successfully!";
-        //        }
-        //        _unitOfWork.Save();
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        return View();
-        //    }
-        //}
+        [HttpPost]
+        public IActionResult UpSert(Company obj)
+        {
+            if (ModelState.IsValid)
+            {
+                if (obj.id == 0 || obj.id == null)
+                {
+                    _unitOfWork.Company.Add(obj);
 
-        
+                    TempData["success"] = "Comapny Created Successfully!";
+                }
+                else
+                {
+                    _unitOfWork.Company.Update(obj);
+                    TempData["success"] = "Comapny Updated Successfully!";
+                }
+                _unitOfWork.Save();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+
 
 
 
@@ -108,10 +110,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
         //    return Json()
             
         //}
-
-
-
-
 
 
         #endregion

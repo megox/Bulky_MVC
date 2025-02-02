@@ -86,7 +86,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
 
 
 
-
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
